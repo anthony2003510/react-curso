@@ -1,0 +1,15 @@
+.card 
+{
+    background-color: #202020;
+    color: #f2f2f2;
+    padding: 10px;
+}
+
+.noncompletedTask
+{
+    background-color: red;
+}
+.completedTask
+{
+    background-color: green;
+}

@@ -3,31 +3,13 @@ import ReactDOM from "react-dom/client";
 import { Greeting, UserCard } from "./Greeting.jsx";
 import Product, { Navbar } from "./Product.jsx";
 import {Button} from "./Button.jsx"
+import {TaskCard} from './Task.jsx'
+import {Saludar} from './Saludar.jsx'
+import {Posts} from './Posts.jsx'
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <>
-    <Button text = 'click me'/>
-    <Button text = 'dont click me'/>
-    <Button text = 'please mate'/>
-    {/* <UserCard
-      name="Anthony Wesley"
-      amount={3000}
-      married={false}
-      points={[99, 33.3, 22.2]}
-      adress={{ street: "123 Main Streer", city: "New York" }}
-      greet ={function (){ alert('Casssssiopia')}}
-    />
-
-    <UserCard
-      name="Iré Regla"
-      amount={2000}
-      married={true}
-      points={[100,200]}
-      adress={{ street: "123 Main Street", city: "New York" }}
-      greet ={function (){ alert('Casssssiopia')}}
-    /> */}
-
-
+      <Posts />
   </>
 );

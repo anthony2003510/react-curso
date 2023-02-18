@@ -10,7 +10,6 @@ root.render(
     <Button text = 'click me'/>
     <Button text = 'dont click me'/>
     <Button text = 'please mate'/>
-    <Button text = 'please mate DONT CLICK ME'/>
     {/* <UserCard
       name="Anthony Wesley"
       amount={3000}

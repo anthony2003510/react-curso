@@ -8,8 +8,33 @@ import {Saludar} from './Saludar.jsx'
 import {Posts} from './Posts.jsx'
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const userarray = [
+  {
+    name : "joe",
+    secondname : "macmillan",
+    imagen: 'https://robohash.org/user1'
+  },
+  
+  {
+    name : "Anthony",
+    secondname : "Rodriguez",
+    imagen: 'https://robohash.org/user2'
+  },
+
+  {
+    name : "Iré",
+    secondname : "Regla",
+    imagen: 'https://robohash.org/user3'
+  }
+]
+
 root.render(
   <>
-      <Posts />
+      {userarray.map((user, i)=>{
+        return <div  key={i}>
+          <h1>{user.name}</h1>
+          <img src={user.imagen}/>
+        </div>
+      })}
   </>
 );

@@ -17,7 +17,8 @@ const married = true
         <h1>{married ? 'estoy casado' : 'no lo estoy'}</h1>
     </div>
   );
-  
+ ////////////////////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/////////////
+ 
 function Greeting() 
 {
   const user = 
@@ -41,6 +42,7 @@ function Greeting()
 }
 
 
+////////////////////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/////////////
 
 root.render(
   <>
@@ -60,6 +62,7 @@ root.render(
 );
 
 
+////////////////////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/////////////
 
 root.render(
   <>
@@ -86,6 +89,7 @@ root.render(
   </>
 );
 
+////////////////////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/////////////
 
 
 root.render(
@@ -115,6 +119,7 @@ root.render(
   </>
 );
 
+////////////////////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/////////////
 
 
 const handleChange = (e) =>
@@ -155,3 +160,103 @@ export const Posts = () => {
   );
 };
 ////////////////////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/////////////
+
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const userarray = [
+  {
+    name : "joe",
+    secondname : "macmillan",
+    imagen: 'https://robohash.org/user1'
+  },
+  
+  {
+    name : "Anthony",
+    secondname : "Rodriguez",
+    imagen: 'https://robohash.org/user2'
+  },
+
+  {
+    name : "Iré",
+    secondname : "Regla",
+    imagen: 'https://robohash.org/user3'
+  }
+]
+
+root.render(
+  <>
+      {userarray.map((user, i)=>{
+        return <div  key={i}>
+          <h1>{user.name}</h1>
+          <img src={user.imagen}/>
+        </div>
+      })}
+  </>
+);
+
+
+////////////////////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!/////////////
+
+
+
+function Counter()
+{
+  const [counter, changeCounter] = useState(10)
+  return (
+    <>
+      <h1>Counter: {counter} </h1>
+      <button onClick={() => 
+      {
+        changeCounter(counter + 1)
+      }
+      }>Sumar</button>
+
+      <button onClick={() => 
+      {
+        changeCounter(counter - 1)
+      }
+      }>Restar</button>
+
+      <button onClick={() => 
+      {
+        changeCounter(0)
+      }
+      }>Reiniciar</button>
+    </>
+  )
+}
+
+root.render(
+  <>
+  <Counter />
+  </>
+);
+// otro useState
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// function Counter()
+// {
+//   const [mensaje, setMensaje] = useState()
+//   return (
+//     <>
+//      <div>
+//       <input onChange={(e)=>
+//         {
+//           setMensaje(e.target.value)
+//         }}/>
+//       <button onClick={()=>
+//         {
+//           alert('el mensaje es ' + mensaje)
+//         }}>Save</button>
+//      </div>
+//     </>
+//   )
+// }
+
+// root.render(
+//   <>
+//   <Counter />
+//   </>
+// );
